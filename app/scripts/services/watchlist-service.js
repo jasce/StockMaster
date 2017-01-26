@@ -30,7 +30,7 @@ angular.module('stockMasterApp')
   	//[3] Use lodash to find a watchlist with given ID
   	var findById = function (listId) {
   		return _.find(Model.watchlists , function (watchlist){
-  			return watchlist.id === parseInt(listId)
+  			return watchlist.id === parseInt(listId);
   		});
   	};
 
@@ -44,16 +44,17 @@ angular.module('stockMasterApp')
   		}
   	};
 
-  	// [5]  Save a new wishlist to wishlists model
-  	this.save = function(wishlist){
-  		wishlist.id = Model.nextId++;
-  		Model.wishlists.push(watchlist);
+  	// [5]  Save a new watchlist to watchlists model
+  	this.save = function(watchlist){
+  		
+  		watchlist.id = Model.nextId++;
+  		Model.watchlists.push(watchlist);
   		saveModel();
   	};
 
-  	// [6] Remove given wishlist from wishlist model
-  	this.remove = function(wishlist){
-  		_.remove(Model.wishlists , function(wishlist){
+  	// [6] Remove given watchlist from watchlist model
+  	this.remove = function(list){
+  		_.remove(Model.watchlists , function(watchlist){
   			return list.id === watchlist.id;
   		});
   		saveModel();

@@ -1,7 +1,9 @@
 {
   "name": "stockmaster",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "https://github.com/lodash/lodash.git#4.17.4"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",

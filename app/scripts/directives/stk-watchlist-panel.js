@@ -10,12 +10,12 @@ angular.module('stockMasterApp')
 	// [1] register direct and inject dependencies
   .directive('stkWatchlistPanel', function ($location , $modal, WatchlistService) {
     return {
-      templateUrl: ' views/ templates/watchlist-panel.html',
+      templateUrl: ' views/templates/watchlist-panel.html',
       restrict: 'E',
       scope: {},
       link: function($scope){
       	 // [2] Initialize variables
-      	 $scope.watchlists = {};
+      	 $scope.watchlist = {};
       	 var addListModal = $modal({
       	 	scope: $scope,
       	 	template: 'views/templates/addlist-modal.html',
