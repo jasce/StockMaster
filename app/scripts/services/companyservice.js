@@ -9,6 +9,5 @@
  */
 angular.module('stockMasterApp')
   .service('CompanyService', function CompanyService($resource) {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-  	return $resource('companies.json');
+    return $resource('companies.json');
   });
